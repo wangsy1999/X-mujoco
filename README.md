@@ -26,16 +26,12 @@ make
 
 打开bitbot-frontend，连接，点击控制，依次快速按下8，p，r，如果机器人倒地可在mujoco中点击reset 
 
-
-
-
 bitbot-frontend的github仓库：https://github.com/limymy/bitbot_frontend-release/releases
 
 ## 已知问题
-目前只能读取actorcritic的policy_class导出的的pt文件，没有适配lstm
+目前只能读取ActorCritic的policy_class导出的的pt文件，没有适配lstm,因此无法读取ActorCriticRecurrent
 
+用cpu推理可能出现速度缓慢的情况（是cpu版libtorch的共同问题）
 
-## 可能存在的问题
-腰部由于urdf内有joint，我不知道如何在xml进行锁定，目前没有在此处添加电机，暂时通过设置极小的限位解决，不知道是否会产生bug
 
 
